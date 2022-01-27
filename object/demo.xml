@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mathcheatobject" class="com.example.object.MathCheat"/>
+    <bean id="stu" class="com.example.object.Student">
+        <property name="id" value="1"/>
+        <property name="mathcheat" ref="mathcheatobject"/>
+<!--            <bean class="com.example.object.MathCheat"/>-->
+<!--        </property> how to inject value of object type-->
+    </bean>
+    <bean id="st" class="com.example.object.Student2">
+<!--        <property name="id" value="2"/>-->
+        <property name="cheat" ref="mathcheatobject"/>
+<!--            <bean class="com.example.object.MathCheat"/>-->
+<!--        </property>-->
+    </bean>
+
+</beans>
